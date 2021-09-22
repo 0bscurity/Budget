@@ -1,5 +1,6 @@
 import sqlite3
 import datetime
+import calculations
 
 conn = sqlite3.connect('transactions.sqlite')
 cur = conn.cursor()
@@ -23,8 +24,7 @@ def read_db():
         print(row)
 
 
-
 input_data()
-cur.close()
 read_db()
-
+calculations.tax()
+cur.close()
