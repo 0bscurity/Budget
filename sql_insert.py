@@ -23,6 +23,7 @@ def read_db():
         print(row)
 
 
+
 input_data()
 cur.close()
 read_db()
