@@ -20,9 +20,14 @@ def input_data():
 
 def read_db():
     cur.execute('SELECT trans_date FROM transactions ORDER BY trans_date desc limit 1')
-    date = cur.fetchone()
-    date_obj = datetime.strptime(date, '%m/%d/%Y')
-    print(date_obj)
+    date = cur.fetchone()[0]
+    datetime_object = datetime.strptime(date.split(" ")[0], '%Y-%m-%d')
+    temp = datetime_object.date()
+
+    print(temp)
+    #date_nt =
+    # date_obj = datetime.strftime(date_nt, '%Y-%m-%d, %H:%M:%S.%f')
+    # print(date_obj)
     # for row in data:
     #     print(row)
 
