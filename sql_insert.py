@@ -1,6 +1,7 @@
 import sqlite3
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
+from GUI import get_date
 
 
 conn = sqlite3.connect('transactions.sqlite')
@@ -25,6 +26,7 @@ def read_db():
     temp = datetime_object.date()
 
     print(temp)
+
     #date_nt =
     # date_obj = datetime.strftime(date_nt, '%Y-%m-%d, %H:%M:%S.%f')
     # print(date_obj)
@@ -34,4 +36,5 @@ def read_db():
 
 input_data()
 read_db()
+get_date()
 cur.close()

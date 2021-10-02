@@ -9,14 +9,20 @@ cal = Calendar(root, selectmode="day")
 cal.pack(pady=20)
 
 
+def get_date():
+    date = cal.get_date()
+    print(date)
+    return date
+
+
 # Add Button and Label
 Button(root, text="Get First Date",
-       command=lambda: date1.config(text="First Date is: " + cal.get_date())).pack(pady=20)
+       command=lambda: date1.config(text="First Date is: " + get_date())).pack(pady=20)
 
 date1_format = cal.get_date()
 
 Button(root, text="Get Second Date",
-       command=lambda: date2.config(text="Second Date is: " + cal.get_date())).pack(pady=20)
+       command=lambda: date2.config(text="Second Date is: " + get_date())).pack(pady=20)
 
 date1 = Label(root, text="")
 date1.pack(pady=20)
