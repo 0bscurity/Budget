@@ -1,7 +1,7 @@
 import sqlite3
 from datetime import datetime
 from dateutil.relativedelta import relativedelta
-from GUI import get_date
+# from GUI import get_date
 
 
 conn = sqlite3.connect('transactions.sqlite')
@@ -27,14 +27,14 @@ def read_db():
 
     print(temp)
 
-    #date_nt =
-    # date_obj = datetime.strftime(date_nt, '%Y-%m-%d, %H:%M:%S.%f')
-    # print(date_obj)
-    # for row in data:
-    #     print(row)
+
+def get_dates():
+    # cur.execute('SELECT * from transactions where trans_date >= date1 and trans_date <= date2')
+    # print("transactions"
+    return "transactions"
 
 
-input_data()
-read_db()
-get_date()
+# input_data()
+# read_db()
+# get_date()
 cur.close()
